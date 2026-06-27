@@ -1,0 +1,60 @@
+{
+  "name": "jup-ag-pulse",
+  "version": "1.0.0",
+  "description": "Jupiter and Solana portfolio monitoring with deterministic hedge decision support",
+  "keywords": [
+    "jupiter",
+    "solana",
+    "defi",
+    "portfolio",
+    "risk-management",
+    "hedging"
+  ],
+  "homepage": "https://github.com/lrmn7/jup-ag-pulse#readme",
+  "bugs": {
+    "url": "https://github.com/lrmn7/jup-ag-pulse/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrmn7/jup-ag-pulse.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": {
+    "name": "lrmn7",
+    "url": "https://github.com/lrmn7"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "jup-ag-pulse": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    ".env.example",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.8.2",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/core.test.ts test/strategy.test.ts",
+    "start": "tsx src/index.ts",
+    "demo": "tsx src/demo.ts",
+    "monitor": "tsx src/index.ts --mode monitor",
+    "simulate": "tsx src/index.ts --mode simulate"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2"
+  }
+}

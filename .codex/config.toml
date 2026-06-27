@@ -1,0 +1,5 @@
+# Project-local Codex configuration.
+#
+# Durable repository instructions live in ../AGENTS.md.
+# Codex discovers the canonical project skills directly from ../.agents/skills/.
+# Model, sandbox, approval, and MCP settings intentionally inherit user defaults.

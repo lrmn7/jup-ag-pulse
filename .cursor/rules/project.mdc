@@ -1,0 +1,9 @@
+---
+description: Core architecture, validation, testing, and transaction-safety rules for Jup.ag Pulse
+globs:
+alwaysApply: true
+---
+
+Read and follow @AGENTS.md as the canonical project instructions.
+
+The reusable Jupiter workflows live in `.agents/skills/`. Use the matching skill when the task concerns Jupiter API integration, Lend, Swap migration, or token verification.
