@@ -108,14 +108,6 @@ The first monitoring cycle establishes a baseline. Five-minute and one-hour sign
 - Trigger helpers never sign deposits or withdrawals and are not invoked automatically by the agent.
 - POST requests are not automatically retried.
 
-## CI/CD
-
-`.github/workflows/ci.yml` runs clean installation, type-checking, tests, build, and package validation on Node.js 20 and 24 for every push and pull request to `main`.
-
-`.github/workflows/publish.yml` publishes to npm only when a GitHub Release is published. The release tag must match the package version, for example `v1.0.1`.
-
-The package is not yet registered on npm. Publish `1.0.0` manually with an authorized npm account and 2FA, then configure its Trusted Publisher for repository `lrmn7/jup-ag-pulse` and workflow `publish.yml`. After incrementing the package version, subsequent GitHub Releases can publish through OIDC without a stored npm token.
-
 ## Troubleshooting
 
 ### Missing `JUPITER_API_KEY`
