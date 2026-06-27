@@ -1,9 +1,7 @@
 # Jup.ag Pulse Engineering and Integration Report
 
 **Project:** Jup.ag Pulse
-
 **Runtime:** Node.js 20+, TypeScript, ESM
-
 **Integrations:** Jupiter Price V3, Tokens V2, Swap V2, Trigger V2, Portfolio V1
 **Review date:** June 27, 2026
 
@@ -109,7 +107,6 @@ If one-hour statistics are absent, analysis returns low confidence and no dump c
 ### Swap V2
 
 The Swap client uses the Meta-Aggregator `/order` and `/execute` flow.
-
 - Quote-only requests omit `taker` and cannot produce a signable transaction.
 - Live preparation supplies a verified wallet address as `taker`.
 - The response uses the current `transaction`, `router`, `mode`, `requestId`, and error fields.
@@ -152,7 +149,6 @@ Other element types are ignored rather than coerced into an incorrect token bala
 ### Live-mode boundary
 
 Live mode does not mean automatic execution. It may prepare an unsigned swap order only when all of the following are true:
-
 - a valid wallet address was configured
 - Portfolio returned the target mint
 - the normalized balance is positive
@@ -173,7 +169,6 @@ If any condition fails, the agent emits an error event and performs no transacti
 ## Testing and quality controls
 
 The project provides focused tests for:
-
 - all five strategy outcomes
 - rule precedence
 - fail-closed behavior with missing history and portfolio data
@@ -192,7 +187,6 @@ The TypeScript configuration enables strict checking, unchecked-index protection
 Run monitor or simulate mode as the default production posture. Treat generated plans as recommendations that require an independent policy and review layer.
 
 If transaction execution is added later, it should be a separate component with:
-
 - wallet allow-lists
 - per-token and per-session amount limits
 - explicit slippage ceilings

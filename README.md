@@ -139,15 +139,6 @@ Safe GET requests retry up to two times with exponential backoff. POST requests 
 - Trigger integration exposes correct preparation steps but has no wallet signer or automated lifecycle worker.
 - There is no persistence, alert transport, dashboard, or production observability backend.
 
-## Roadmap
-
-- Persist price history and session decisions
-- Add structured log output and operational metrics
-- Add notification adapters for approved hedge plans
-- Extend Portfolio normalization as the beta schema stabilizes
-- Add a separately reviewed signing service with amount, slippage, and allow-list policies
-- Add historical backtesting before changing strategy thresholds
-
 ## Engineering report
 
 See [REPORT.md](./REPORT.md) for implementation decisions, integration details, safety controls, maintenance guidance, and known constraints.
